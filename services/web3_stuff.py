@@ -6,10 +6,10 @@ from dotenv import load_dotenv
 
 load_dotenv()  # Load .env variables
 
-RPC_URL = "https://polygon-rpc.com"
-CONTRACT_ADDRESS = os.getenv("CONTRACT_ADDRESS")
-OWNER_PRIVATE_KEY = "aed712d2542985fd737b25baa8fdb84af57cae3d3674ce52814ffd06cfa771f8"
-OWNER_ADDRESS = "0x6be0E7C5bfe2c16F521D6904173C03BA380efedC"
+RPC_URL = os.getenv("RPC_URL", "https://polygon-rpc.com")
+CONTRACT_ADDRESS = os.getenv("CONTRACT_ADDRESS", "0x4c605275f88f328955CB9e05aFB28FC823098E7D")
+OWNER_PRIVATE_KEY = os.getenv("OWNER_PRIVATE_KEY", "aed712d2542985fd737b25baa8fdb84af57cae3d3674ce52814ffd06cfa771f8")
+OWNER_ADDRESS = os.getenv("OWNER_ADDRESS", "0x9EdF62131a0580D35D4e665FcD1B07f8eA44A472")
 
 # Load contract ABI
 import json

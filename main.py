@@ -4,17 +4,16 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import bcrypt
 import os
 import numpy as np
-from .models import MerchantModel, TransactionModel
-from .schemas import SignUpRequest
-from .schemas import SignInRequest
-from .schemas import CompareFaceRequest
+from models import MerchantModel, TransactionModel
+from schemas import SignUpRequest, SignInRequest, CompareFaceRequest
 import face_recognition
+import face_recognition_models
 from io import BytesIO
 
 from services.web3_stuff_router import router as web3_stuff_router
 
 # Initialize FastAPI app
-app = FastAPI(lifespan=lifespan)
+app = FastAPI()
 app.include_router(web3_stuff_router)
 
 # MongoDB client initialization
